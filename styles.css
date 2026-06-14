@@ -40,6 +40,7 @@ body.nav-open {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -118,6 +119,18 @@ textarea {
   background: linear-gradient(135deg, var(--red), var(--wood));
   color: #fff;
   font-weight: 900;
+}
+
+.brand-logo-mark {
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.brand-logo-mark img {
+  width: 80px;
+  max-width: none;
+  height: auto;
 }
 
 .brand-copy {
@@ -308,7 +321,7 @@ textarea {
 }
 
 .hero-media {
-  background-image: url("assets/hero-nordic-house.jpg");
+  background-image: url("assets/selboe-rowhouses-wide.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.02);
@@ -358,6 +371,35 @@ textarea {
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
   font-size: 21px;
+}
+
+.hero-brand-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+  max-width: min(520px, 100%);
+  padding: 10px 14px 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.hero-brand-card img {
+  width: 154px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.hero-brand-card span {
+  max-width: 220px;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.25;
 }
 
 .hero-actions {
@@ -514,6 +556,7 @@ textarea {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center;
 }
 
 .feature-panel-copy {
@@ -650,12 +693,30 @@ textarea {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
 }
 
+.quality-media {
+  position: relative;
+}
+
 .quality-media img {
   width: 100%;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.quality-main {
+  aspect-ratio: 4 / 3;
+  object-position: center 58%;
+}
+
+.quality-media .quality-inset {
+  position: absolute;
+  right: -22px;
+  bottom: -34px;
+  width: min(240px, 42%);
+  aspect-ratio: 3 / 4;
+  border: 8px solid #fff;
+  object-position: center;
 }
 
 .quality-copy p {
@@ -693,6 +754,69 @@ textarea {
   align-items: end;
   gap: 24px;
   margin-bottom: 28px;
+}
+
+.team-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 16px;
+  border: 1px solid rgba(0, 32, 91, 0.1);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 16px 45px rgba(19, 34, 49, 0.08);
+}
+
+.team-showcase > img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+}
+
+.team-showcase-copy {
+  padding: 10px 12px 10px 0;
+}
+
+.team-showcase-copy h3 {
+  margin: 8px 0 12px;
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.team-showcase-copy p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+}
+
+.workplace-proof {
+  display: inline-grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 10px 12px 10px 10px;
+  border: 1px solid rgba(0, 32, 91, 0.1);
+  border-radius: var(--radius);
+  background: var(--mist);
+}
+
+.workplace-proof img {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.workplace-proof span {
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.2;
 }
 
 .team-row {
@@ -819,6 +943,15 @@ textarea {
   align-items: center;
 }
 
+.footer-logo {
+  width: 156px;
+  height: auto;
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  background: #fff;
+}
+
 .footer-grid strong {
   color: #fff;
 }
@@ -838,8 +971,8 @@ textarea {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
+  opacity: 1;
+  transform: translateY(0);
   transition:
     opacity 520ms ease,
     transform 520ms ease;
@@ -903,6 +1036,18 @@ textarea {
   .team-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .team-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .team-showcase-copy {
+    padding: 0 4px 4px;
+  }
+
+  .quality-media .quality-inset {
+    right: 18px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -923,6 +1068,10 @@ textarea {
   .brand-mark {
     width: 40px;
     height: 40px;
+  }
+
+  .brand-logo-mark img {
+    width: 74px;
   }
 
   .brand-copy span {
@@ -953,6 +1102,16 @@ textarea {
 
   .hero-lead {
     font-size: 18px;
+  }
+
+  .hero-brand-card {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    width: 100%;
+  }
+
+  .hero-brand-card img {
+    width: 128px;
   }
 
   .hero-actions,
@@ -998,6 +1157,23 @@ textarea {
   .quality-points,
   .team-row {
     grid-template-columns: 1fr;
+  }
+
+  .quality-media .quality-inset {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 58%;
+    margin: -86px 16px 0 auto;
+    border-width: 6px;
+  }
+
+  .team-showcase {
+    padding: 12px;
+  }
+
+  .team-showcase-copy h3 {
+    font-size: 25px;
   }
 
   .service-card {

@@ -13,8 +13,9 @@
       property="og:description"
       content="Lokalt byggmesterteam med Norgeshus i ryggen. Kvalitet, trygghet og solid håndverk fra første befaring til ferdig bygg."
     />
-    <meta property="og:image" content="assets/hero-nordic-house.jpg" />
-    <link rel="preload" href="assets/hero-nordic-house.jpg" as="image" />
+    <meta property="og:image" content="assets/selboe-rowhouses-wide.jpg" />
+    <link rel="preload" href="assets/selboe-rowhouses-wide.jpg" as="image" />
+    <link rel="icon" href="assets/selboe-logo.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="styles.css" />
     <script src="icons.js" defer></script>
     <script src="script.js" defer></script>
@@ -24,7 +25,9 @@
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Gå til toppen">
-        <span class="brand-mark">SB</span>
+        <span class="brand-mark brand-logo-mark" aria-hidden="true">
+          <img src="assets/selboe-logo.jpg" width="1280" height="643" alt="" />
+        </span>
         <span class="brand-copy">
           <strong>Selboe Bygg</strong>
           <span>Norgeshus-forhandler</span>
@@ -63,6 +66,10 @@
             Lokal byggmester med tung fagkunnskap, eget tømrerlag og Norgeshus-systemet i ryggen.
             Fra ny enebolig og hytte til tilbygg, rehabilitering og næringsbygg.
           </p>
+          <div class="hero-brand-card" aria-label="Norgeshus Selboe Bygg">
+            <img src="assets/selboe-logo.jpg" width="1280" height="643" alt="Norgeshus Selboe Bygg" />
+            <span>Lokalt eierskap. Landsdekkende fagmiljø.</span>
+          </div>
           <div class="hero-actions" aria-label="Viktige handlinger">
             <a class="button primary" href="tel:+4799224441">
               <i data-lucide="phone-call"></i>
@@ -123,17 +130,17 @@
           <div class="service-layout">
             <article class="feature-panel reveal">
               <img
-                src="assets/project-vinterstue.jpg"
-                width="1448"
-                height="1086"
-                alt="Moderne vinterstue og tilbygg på norsk trehus"
+                src="assets/selboe-bathroom.jpg"
+                width="960"
+                height="1280"
+                alt="Ferdigstilt bad med store fliser, glassdusj og sorte detaljer"
               />
               <div class="feature-panel-copy">
-                <span>Som nytt</span>
-                <h3>Totalrehabilitering med nyboligfølelse</h3>
+                <span>Detaljarbeid</span>
+                <h3>Ferdige rom med ren utførelse</h3>
                 <p>
-                  Eldre boliger kan få nytt uttrykk, bedre energi og smartere planløsninger uten at
-                  tomten og stedets kvaliteter forsvinner.
+                  Fra våtrom og trapp til hele boliger: samme krav til presisjon, materialvalg og
+                  finish i de små detaljene som i de store byggene.
                 </p>
               </div>
             </article>
@@ -207,12 +214,12 @@
           </div>
           <figure class="project-media reveal">
             <img
-              src="assets/project-sandmarktunet.jpg"
-              width="1672"
-              height="941"
-              alt="Moderne norske rekkehus rundt et familievennlig tun"
+              src="assets/selboe-rowhouses-close.jpg"
+              width="1280"
+              height="960"
+              alt="Moderne rekkehus med trekledning, balkonger og naturtomt"
             />
-            <figcaption>Rekkehusmiljø inspirert av prosjektinformasjonen fra Sandmarktunet.</figcaption>
+            <figcaption>Foto fra moderne rekkehusprosjekt levert av Selboe Bygg.</figcaption>
           </figure>
         </div>
       </section>
@@ -221,10 +228,18 @@
         <div class="section-inner quality-grid">
           <div class="quality-media reveal">
             <img
-              src="assets/craftsmanship-detail.jpg"
-              width="1448"
-              height="1086"
-              alt="Tømrer som måler og merker en trebjelke under bygging"
+              class="quality-main"
+              src="assets/selboe-living-room.jpg"
+              width="959"
+              height="1280"
+              alt="Nyoppusset stue med peisovn, store vinduer og varmt tregulv"
+            />
+            <img
+              class="quality-inset"
+              src="assets/selboe-staircase.jpg"
+              width="960"
+              height="1280"
+              alt="Trapp med lyse trinn, sort rekkverk og integrert belysning"
             />
           </div>
           <div class="quality-copy">
@@ -261,6 +276,26 @@
           <div class="team-header">
             <p class="eyebrow dark">Team</p>
             <h2>Folkene som bygger</h2>
+          </div>
+          <div class="team-showcase reveal">
+            <img
+              src="assets/selboe-team.jpg"
+              width="1280"
+              height="960"
+              alt="Teamet i Norgeshus Selboe Bygg samlet"
+            />
+            <div class="team-showcase-copy">
+              <p class="eyebrow dark">Lokalt lag</p>
+              <h3>Et sammensveiset tømrerteam med tydelig ansvar på hvert prosjekt.</h3>
+              <p>
+                Kundene møter korte beslutningsveier, folk som kjenner området og håndverkere som
+                følger prosjektet tett fra befaring til overlevering.
+              </p>
+              <div class="workplace-proof">
+                <img src="assets/gptw-2024.jpg" width="1280" height="1280" alt="Norges Beste Arbeidsplasser 2024" />
+                <span>Norges Beste Arbeidsplasser 2024</span>
+              </div>
+            </div>
           </div>
           <div class="team-row" role="list">
             <article role="listitem"><strong>Askil Selboe</strong><span>Daglig leder</span></article>
@@ -340,6 +375,7 @@
     <footer class="site-footer">
       <div class="section-inner footer-grid">
         <div>
+          <img class="footer-logo" src="assets/selboe-logo.jpg" width="1280" height="643" alt="Norgeshus Selboe Bygg" />
           <strong>Norgeshus Selboe Bygg AS</strong>
           <p>Byggmester i Selbu, Tydal, Stjørdal og Trondheimsområdet.</p>
         </div>
