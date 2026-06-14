@@ -121,16 +121,16 @@ textarea {
   font-weight: 900;
 }
 
-.brand-logo-mark {
+.brand-house-mark {
   overflow: hidden;
   background: #fff;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
-.brand-logo-mark img {
-  width: 80px;
-  max-width: none;
-  height: auto;
+.brand-house-mark img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .brand-copy {
@@ -388,7 +388,23 @@ textarea {
   backdrop-filter: blur(12px);
 }
 
-.hero-brand-card img {
+.hero-brand-logo-link {
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 6px;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.hero-brand-logo-link:hover,
+.hero-brand-logo-link:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 32, 91, 0.14);
+  outline: none;
+}
+
+.hero-brand-logo-link img {
   width: 154px;
   height: auto;
   border-radius: 6px;
@@ -1070,8 +1086,9 @@ textarea {
     height: 40px;
   }
 
-  .brand-logo-mark img {
-    width: 74px;
+  .brand-house-mark img {
+    width: 32px;
+    height: 32px;
   }
 
   .brand-copy span {
@@ -1110,7 +1127,7 @@ textarea {
     width: 100%;
   }
 
-  .hero-brand-card img {
+  .hero-brand-logo-link img {
     width: 128px;
   }
 
