@@ -577,7 +577,7 @@ textarea {
   inset: 0;
   background:
     linear-gradient(135deg, rgba(203, 51, 59, 0.18), transparent 32%),
-    radial-gradient(circle at 88% 10%, rgba(31, 93, 75, 0.36), transparent 30%);
+    linear-gradient(90deg, transparent, rgba(31, 93, 75, 0.22));
   pointer-events: none;
 }
 

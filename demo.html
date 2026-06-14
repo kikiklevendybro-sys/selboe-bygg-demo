@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kundedemo | Norgeshus Selboe Bygg</title>
-    <meta
-      name="description"
-      content="Presentasjonsvisning for nettsidedemo av Norgeshus Selboe Bygg."
-    />
+    <title>Kundedemo | Tre utgaver for Selboe Bygg</title>
+    <meta name="description" content="Tre ulike nettsideutgaver for Norgeshus Selboe Bygg." />
     <link rel="preload" href="assets/hero-nordic-house.jpg" as="image" />
     <link rel="stylesheet" href="demo.css" />
     <script src="icons.js" defer></script>
@@ -19,14 +16,14 @@
         <span class="demo-mark">SB</span>
         <span>
           <strong>Selboe Bygg</strong>
-          <small>Kundedemo</small>
+          <small>Tre utgaver</small>
         </span>
       </a>
 
       <nav class="demo-actions" aria-label="Demohandlinger">
-        <a class="icon-link" href="index.html" target="_blank" rel="noreferrer" title="Åpne nettsiden">
+        <a class="icon-link" href="variant-a.html" target="_blank" rel="noreferrer" title="Åpne valgt utgave" data-open-current>
           <i data-lucide="external-link"></i>
-          <span>Åpne nettsiden</span>
+          <span>Åpne valgt</span>
         </a>
         <button class="icon-link" type="button" data-fullscreen title="Fullskjerm">
           <i data-lucide="maximize-2"></i>
@@ -38,13 +35,31 @@
     <main class="demo-shell">
       <section class="demo-hero" aria-labelledby="demo-title">
         <div>
-          <p class="eyebrow">Presentasjon</p>
-          <h1 id="demo-title">Nettsidekonsept for Norgeshus Selboe Bygg</h1>
+          <p class="eyebrow">Kundevalg</p>
+          <h1 id="demo-title">Tre ulike retninger for Norgeshus Selboe Bygg</h1>
         </div>
         <p>
-          En komplett, responsiv forside bygget rundt lokal tillit, sterke prosjektbilder,
-          tydelige tjenester og lav terskel for kontakt.
+          Alle tre er minimalistiske, raske å orientere seg i og bygget rundt samme innhold.
+          Forskjellen ligger i uttrykk, rytme og hvordan tillit etableres visuelt.
         </p>
+      </section>
+
+      <section class="concept-grid" aria-label="Velg nettsideutgave">
+        <button class="concept-card is-active" type="button" data-concept="variant-a.html">
+          <span>A</span>
+          <strong>Arkitekt</strong>
+          <small>Lys, presis og redaksjonell.</small>
+        </button>
+        <button class="concept-card" type="button" data-concept="variant-b.html">
+          <span>B</span>
+          <strong>Lokal varme</strong>
+          <small>Mer taktil, jordnær og menneskelig.</small>
+        </button>
+        <button class="concept-card" type="button" data-concept="variant-c.html">
+          <span>C</span>
+          <strong>Premium mørk</strong>
+          <small>Kontrast, ro og teknisk tyngde.</small>
+        </button>
       </section>
 
       <section class="demo-grid" aria-label="Live demo">
@@ -55,6 +70,7 @@
               <span></span>
               <span></span>
             </div>
+            <div class="preview-title" data-preview-title>Utgave A · Arkitekt</div>
             <div class="device-toggle" role="group" aria-label="Velg visning">
               <button class="is-active" type="button" data-device="desktop">
                 <i data-lucide="monitor"></i>
@@ -68,43 +84,27 @@
           </div>
 
           <div class="preview-stage is-desktop" data-preview-stage>
-            <iframe title="Nettside for Norgeshus Selboe Bygg" src="index.html"></iframe>
+            <iframe title="Valgt nettsideutgave for Norgeshus Selboe Bygg" src="variant-a.html" data-preview-frame></iframe>
           </div>
         </div>
 
         <aside class="talk-track" aria-label="Snakkepunkter">
           <article>
             <span>01</span>
-            <h2>Førsteinntrykk</h2>
-            <p>Heroen selger kvalitet og stedstilhørighet før brukeren rekker å lese detaljene.</p>
+            <h2>Samme innhold</h2>
+            <p>Tjenester, prosjekt, kvalitet og kontakt ligger fast i alle variantene.</p>
           </article>
           <article>
             <span>02</span>
-            <h2>Konvertering</h2>
-            <p>Telefon, e-post og befaring ligger synlig i topp, hero og kontaktseksjon.</p>
+            <h2>Tre uttrykk</h2>
+            <p>Kunden kan velge mellom mer arkitektonisk, mer lokalt eller mer premium.</p>
           </article>
           <article>
             <span>03</span>
-            <h2>Innhold</h2>
-            <p>Tjenester, Sandmarktunet, team og kvalitet er strukturert for raske kundesvar.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h2>Responsivt</h2>
-            <p>Samme uttrykk fungerer på stor skjerm og mobil, med egen mobilmeny og stabile CTA-er.</p>
+            <h2>Mobil først</h2>
+            <p>Alle variantene er sjekket med mobilvisning, meny og tydelige kontaktpunkter.</p>
           </article>
         </aside>
-      </section>
-
-      <section class="demo-notes" aria-label="Demooppsummering">
-        <div>
-          <p class="eyebrow">Foreslått møteflyt</p>
-          <h2>Start med heroen, bytt til mobil, avslutt på kontakt.</h2>
-        </div>
-        <a class="primary-link" href="index.html#kontakt" target="_blank" rel="noreferrer">
-          <i data-lucide="send"></i>
-          <span>Gå rett til kontakt</span>
-        </a>
       </section>
     </main>
   </body>

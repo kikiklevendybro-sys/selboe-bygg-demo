@@ -175,6 +175,68 @@ button {
   font-size: 18px;
 }
 
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.concept-card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 4px 14px;
+  align-items: center;
+  min-height: 116px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 16px 46px rgba(5, 16, 34, 0.12);
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.concept-card:hover,
+.concept-card:focus-visible {
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.concept-card.is-active {
+  border-color: rgba(203, 51, 59, 0.68);
+  background: #fff;
+}
+
+.concept-card span {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 900;
+}
+
+.concept-card.is-active span {
+  background: var(--red);
+}
+
+.concept-card strong {
+  font-size: 20px;
+}
+
+.concept-card small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .demo-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
@@ -199,13 +261,19 @@ button {
 
 .preview-toolbar {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 16px;
   min-height: 62px;
   padding: 10px 14px;
   background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--line);
+}
+
+.preview-title {
+  min-width: 0;
+  color: var(--ink);
+  font-weight: 900;
 }
 
 .window-dots {
@@ -344,6 +412,10 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .concept-grid {
+    grid-template-columns: 1fr;
+  }
+
   .primary-link {
     justify-self: start;
   }
@@ -381,6 +453,10 @@ button {
 
   .device-toggle {
     justify-self: stretch;
+  }
+
+  .preview-title {
+    display: none;
   }
 
   .device-toggle button {
